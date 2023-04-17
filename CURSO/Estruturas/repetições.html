@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nomes = [
+            "Caetano",
+            "Maicon",
+            "Daniel",
+            "Jeferson",
+            "Josiane",
+            "Vinicius",
+            "Thiago",
+        ]
+
+        for (let index = 0; index < nomes.length; index++) {
+            console.log(nomes[index]);
+            
+        }
+        nomes.forEach(element => {
+            console.log(element)
+        });
+
+        var i = 0;
+        while (i < nomes.length) {
+            console.log(nomes[i]);
+            i++;
+            
+        }
+
+// ATV 1 - CRIAR UM DO WHILE E MOSTRAR TODOS OS NOMES DO ARRAY NOMES
+
+        var y = 0;
+        do {
+            console.log(nomes[y]);
+            y++;
+        } while (y < nomes.length);
+
+//ATV 2 - CRIAR UMA FUNÇÃO SEM PARAMETROS, DENTRO DA FUNÇÃO EXECUTAR UM FOR E MOSTRAR TODOS OS NOMES DO ARRAY NOMES
+
+function mostrar_nomes(){
+    for (let index = 0; index < nomes.length; index++) {
+            console.log(nomes[index]);
+    }
+}
+// CHAMANDO A FUNÇÃO PARA QUE ELA EXECUTE
+mostrar_nomes();
+
+//ATV 3-CRIAR UMA FUNÇÃO COM PARAMETROS , O PARAMETRO VAI SER O ARRAY NOMES, DENTRO DA FUNÇÃO EXECUTAR UM WHILE E MOSTRAR TODOS OS NOMES DO ARRAY NOMES
+function batatinha(no){
+    var u = 0;
+    while (u < no.length){
+        console.log(no[u]);
+        u++
+    }  
+}
+batatinha(nomes);
+var numeros = [1, 2, 3, 4, 5]
+batatinha(numeros);
+
+//CRIAR UMA FUNÇÃO QUE FAÇA A AMOSTRAGEM DE QUALQUER MENSAGEM PASSADA PELO PROMPT()
+var mensagem = prompt("Digite uma mensagem: ");
+
+function amostragem(m) {
+  alert("A mensagem digitada foi: " + m);
+}
+
+amostragem(mensagem);
+    
+
+
+
+    </script>
+</body>
+</html>
