@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+   <script>
+
+//1 Criar um array com todos os tipos de dados ensinados até o momento
+
+var meuArray = ["string", 123, true, 3.14];
+console.log(meuArray);
+
+//2 Criar um array para definir valores em strings, e deixe que o array gerencie as posições 
+
+var nomes = ["João", "Maria", "José", "Ana"];
+console.log(nomes[2]); 
+
+nomes[1] = "Pedro";
+
+console.log(nomes);
+
+//3 Criar um array com posições previamente definidas 
+
+var aleatorio = new Array(5);
+
+//definindo valores para as posições
+
+aleatorio[0] = "valor1";
+aleatorio[3] = "valor2";
+
+console.log(aleatorio);
+
+//4 Criar um array com uma posição definida, que receba um outro array com posições dinâmicas 
+
+var array = [];
+array[0] = { "nome": "João", "idade":30, "cores":["azul","verde","amarelo"]};
+
+console.log(array[0]);
+
+console.log(array[0].nome);
+
+console.log(array[0].cores[1]);
+
+//ATV NOVAAAA
+
+
+
+
+   </script> 
+
+</body>
+
+</html>
