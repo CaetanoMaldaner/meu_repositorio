@@ -1,15 +1,6 @@
-<?php
-
-session_start();
-if (isset($_SESSION["logged"])){
-	header("location:index.php");
-}
-
-?>
-
 <div id="tituloHOME">
 
-	<h1>Bem vindo ao sistema</h1>
+	<h1>Bem vindo ao sistema de ensino golfinho</h1>
 	<br><br><br><br>
 </div>
 

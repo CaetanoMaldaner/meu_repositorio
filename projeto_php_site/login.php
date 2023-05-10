@@ -1,10 +1,19 @@
 <?php
 
-$usuarioSalvo = "caetano.maldaner@alunos.sc.senac.br";
-$senhaSalva = sha1("12345678");
+include "db.php";
 
-$senhaDigitada = sha1($_POST["senha"]);
 $usuarioDigitado = $_POST["usuario"];
+$senhaDigitada = $_POST[sha1("senha")];
+
+
+//cria a query para buscar os dados no banco de dados
+$query = "SELECT * FROM usuarios WHERE usuario = $usuarioDigitado";
+
+//executa a pesquisa no banco de dados
+
+$usuario = mysqli_query($connection, $query);
+
+
 
 if($senhaSalva === $senhaDigitada && $usuarioSalvo === $usuarioDigitado){
     

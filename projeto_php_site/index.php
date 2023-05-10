@@ -2,17 +2,34 @@
 //Starta a sessão do usuario
 session_start();
 
-//Confere se a variavel $_SESSION = logged = true , se sim, continua para a pagina index
-if(isset($_SESSION["logged"])){
-    echo "<h2>Hello World</h2>";
-    echo "<a href='logout.php'> (SAIR) </a>";
+include "header.php";
 
-
+if (isset($_SESSION["logged"])){
+    if(isset($_GET['pagina'])){
+        $pagina = $_GET['pagina'];
+    }else{
+        $pagina = 'seg';
+    }
 }else{
+    $pagina = 'home';
+}
 
-    //Se não, redireciona de volta para a pagina de login caso o usuario ou senha estejam invalidos
-
-    header("location:home.php?error=1");
+switch ($pagina) {
+    case 'seg':
+        include 'seg.php';
+        break;
+    case 'listadealunos':
+        include 'views/consulta.php';
+        break;
+    case 'consultanotas':
+        include 'views/verNota.php';
+        break;
+    case 'inserirnota':
+        include 'views/inserirNota.php';
+        break;
+    default:
+        include 'home.php';
+        break;
 }
 
 
